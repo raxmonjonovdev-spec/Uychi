@@ -1,0 +1,20 @@
+{
+  "name": "uychi-ai-hub",
+  "version": "1.0.0",
+  "description": "Uychi AI & IT Hub — Digital investment portal and corporate showcase",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w frontend\" \"npm run start:dev -w backend\"",
+    "build": "npm run build -w frontend && npm run build -w backend",
+    "start": "concurrently \"npm start -w frontend\" \"npm start -w backend\"",
+    "lint": "npm run lint -w frontend && npm run lint -w backend",
+    "type-check": "npm run type-check -w frontend && npm run type-check -w backend",
+    "format": "npm run format -w frontend && npm run format -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
